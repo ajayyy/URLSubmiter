@@ -1,0 +1,15 @@
+BEGIN TRANSACTION;
+
+CREATE TABLE IF NOT EXISTS "urls" (
+	"url"	TEXT NOT NULL UNIQUE,
+	"timeSubmitted"	INTEGER NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS "config" (
+    "key" TEXT NOT NULL UNIQUE,
+	"value" TEXT NOT NULL
+);
+
+CREATE INDEX IF NOT EXISTS urls_index on urls(url);
+
+COMMIT;

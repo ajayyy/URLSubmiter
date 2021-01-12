@@ -1,0 +1,10 @@
+{
+    "port": 80,
+    "behindProxy": "X-Forwarded-For",
+    "mode": "development",
+    "db": "./databases/list.db",
+    "createDatabaseIfNotExist": true,
+    "schemaFolder": "./databases",
+    "dbSchema": "./databases/_list.db.sql",
+    "readOnly": false
+}

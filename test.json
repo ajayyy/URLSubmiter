@@ -1,0 +1,11 @@
+{
+    "port": 8080,
+    "mockPort": 8081,
+    "behindProxy": true,
+    "db": "./test/databases/list.db",
+    "createDatabaseIfNotExist": true,
+    "schemaFolder": "./databases",
+    "dbSchema": "./databases/_list.db.sql",
+    "mode": "test",
+    "readOnly": false
+}
