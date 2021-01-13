@@ -11,7 +11,7 @@ export async function submitURLs(req: Request, res: Response) {
         res.sendStatus(400);
         return;
     }
-    
+
     urls = urls.filter((url) => 
             (typeof url === "string") && url?.match(/^(http|https):\/\/((www|[.*]{3}).|)mediafire.com/));
 

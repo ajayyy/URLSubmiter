@@ -1,0 +1,101 @@
+#urls {
+  width: 80%;
+  margin: 10px;
+  height: 15em;
+}
+
+#submitButton {
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+/* Buttons */
+
+.option-button {
+  cursor: pointer;
+
+  background-color: #c00000;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+  font-size: 14px;
+
+  width: max-content;
+}
+
+.option-button:hover {
+  background-color: #fc0303;
+}
+
+.option-button.disabled {
+  cursor: default;
+
+  background-color: #520000;
+  color: grey;
+}
+
+/* Rest */
+
+.bigText {
+  font-size: 50px;
+}
+
+body {
+  background-color: #333333;
+  font-family: sans-serif;
+}
+
+.center {
+  text-align: center;
+}
+
+.container {
+  max-width: 60%;
+  margin: auto;
+}
+
+.createdBy {
+  font-size: 14px;
+  text-align: center;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+#title {
+  background-color: #636363;
+
+  text-align: center;
+  vertical-align: middle;
+
+  font-size: 50px;
+  color: #212121;
+
+  padding: 20px;
+  
+  text-decoration: none;
+
+  transition: font-size 1s;
+}
+
+.profilepic {
+  background-color: #636363 !important;
+  vertical-align: middle;
+}
+
+.profilepiccircle {
+  vertical-align: middle;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+
+p,li,a {
+  color: #c4c4c4;
+}
+
+@media screen and (orientation:portrait) {
+  p,li,code,a {
+	max-width: 100%;
+  }
+}

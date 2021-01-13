@@ -5,6 +5,7 @@ import {submitURLs} from './routes/submitURLs';
 
 import {loggerMiddleware} from './middleware/logger';
 import {corsMiddleware} from './middleware/cors';
+import path from 'path';
 
 
 export function createServer(callback: () => void) {
@@ -28,11 +29,12 @@ export function createServer(callback: () => void) {
 }
 
 function setupRoutes(app: Express) {
-
     //add the get function
     app.post('/api/submitURLs', submitURLs);
 
     // app.get('/database.db', function (req: Request, res: Response) {
     //     res.sendFile("./databases/list.db", {root: "./"});
     // });
+
+    app.use('/', express.static(path.join(__dirname, '../static')));
 }
