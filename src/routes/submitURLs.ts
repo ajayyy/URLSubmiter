@@ -13,8 +13,7 @@ export async function submitURLs(req: Request, res: Response) {
     }
 
     urls = urls.filter((url) => 
-            (typeof url === "string") && 
-            url?.match(/^(https?:\/\/)?(([a-z0-9]{2,4}\.)?(mediafire\.com|mfi\.re)\/(\?|view\/|download\/|listen\/|file\/|watch\/|download\.php\?|imageview\.php\?quickkey=)|download\d+\.mediafire\.com\/[^\/]+\/|upload\.mediafire\.com\/|cdn\.mediafire\.com\/\?)[a-z0-9]+/));
+            (typeof url === "string") && url?.match(/^(http|https):\/\/((www|[.*]{3}).|)mediafire.com/));
 
     if (urls.length <= 0) {
         // All invalid URLs
