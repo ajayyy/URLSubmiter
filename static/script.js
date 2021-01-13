@@ -16,5 +16,5 @@ submitButton.addEventListener("click", (event) => {
         alert("Submission failed: \n\n" + err);
     });
 
-    textBox.innerText = "";
+    textBox.value = "";
 });
