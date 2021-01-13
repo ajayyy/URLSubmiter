@@ -32,9 +32,9 @@ function setupRoutes(app: Express) {
     //add the get function
     app.post('/api/submitURLs', submitURLs);
 
-    // app.get('/database.db', function (req: Request, res: Response) {
-    //     res.sendFile("./databases/list.db", {root: "./"});
-    // });
+    app.get('/list.db', function (req: Request, res: Response) {
+        res.sendFile("./databases/list.db", {root: "./"});
+    });
 
     app.use('/', express.static(path.join(__dirname, '../static')));
 }
