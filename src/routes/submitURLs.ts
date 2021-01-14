@@ -5,6 +5,8 @@ import { Logger } from '../utils/logger';
 
 export async function submitURLs(req: Request, res: Response) {
     let urls = req.body?.urls as string[];
+    let description = req.body?.description as string;
+    let submitter = req.body?.submitter as string;
 
     if (urls == undefined || urls?.length <= 0) {
         // Invalid request
@@ -21,11 +23,14 @@ export async function submitURLs(req: Request, res: Response) {
         return;
     }
 
+    if (typeof description !== "string") description = "";
+    if (typeof submitter !== "string") submitter = "";
+
     const now = Date.now();
 
     urls.forEach((url) => {
         if (url) {
-            db.prepare('run', "INSERT OR IGNORE INTO urls VALUES(?, ?)", [url, now]);
+            db.prepare('run', "INSERT OR IGNORE INTO urls VALUES(?, ?, ?, ?)", [url, now, submitter, description]);
         }
     });
 

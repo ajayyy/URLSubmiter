@@ -4,6 +4,17 @@
   height: 15em;
 }
 
+#description {
+  width: 80%;
+  margin: 10px;
+  height: 3em;
+}
+
+#submitter {
+  margin: 10px;
+  height: 1em;
+}
+
 #submitButton {
   left: 0;
   right: 0;
@@ -90,7 +101,7 @@ body {
 }
 
 
-p,li,a {
+p,li,a,.text {
   color: #c4c4c4;
 }
 
