@@ -15,7 +15,7 @@ export function createServer(callback: () => void) {
     //setup CORS correctly
     app.use(corsMiddleware);
     app.use(loggerMiddleware);
-    app.use(express.json());
+    app.use(express.json({limit: "150mb"}));
 
     // Setup pretty JSON
     if (config.mode === "development") app.set('json spaces', 2);
